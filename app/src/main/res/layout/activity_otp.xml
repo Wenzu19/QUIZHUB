@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
+    tools:context=".OtpActivity">
+
+    <TextView
+        android:id="@+id/otp_description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:text="OTP sent Your register Mobile Number"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/verification_code_entered_by_user"
+        style="@style/PinWidget.PinView"
+        android:layout_marginTop="20dp"
+        android:layout_width="325dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="@color/white"
+        app:cursorColor="@color/black"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="50dp"
+        app:itemRadius="5dp"
+        app:itemWidth="50dp"
+        app:lineColor="#FF9800"
+        app:lineWidth="1dp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="321dp" />
+
+    <Button
+        android:id="@+id/verify_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round"
+        android:onClick="callNextScreenFromOTP"
+        android:padding="8dp"
+        android:text="Verify Code"
+        android:layout_margin="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="400dp"
+        tools:ignore="OnClick"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+
+
+</LinearLayout>
